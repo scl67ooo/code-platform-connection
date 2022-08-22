@@ -8,5 +8,6 @@ public class Main {
 			int b = Integer.parseInt(sc.next());
 			System.out.println(a + b);
 		}
+        sc.close();
 	}
 }
