@@ -11,21 +11,17 @@ public class Main {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int n = Integer.parseInt(st.nextToken());
-		String[] s = new String[n];
+		HashSet<String> s = new HashSet<>();
 		int m = Integer.parseInt(st.nextToken());
-		String[] array = new String[m];
 		int count = 0;
 		for (int i = 0; i < n; i++) {
 			st = new StringTokenizer(br.readLine());
-			s[i] = st.nextToken();
+			s.add(st.nextToken());
 		}
 		for (int i = 0; i < m; i++) {
 			st = new StringTokenizer(br.readLine());
-			array[i] = st.nextToken();
-			for (int j = 0; j < n; j++) {
-				if (array[i].equals(s[j])) {
-					count++;
-				}
+			if (s.contains(st.nextToken())) {
+				count++;
 			}
 		}
 		bw.write(count + "\n");
