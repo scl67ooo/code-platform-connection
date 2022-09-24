@@ -21,7 +21,6 @@ public class Main {
 				array = new int[] {
 						fibonacci(n - 1)[0] + fibonacci(n - 2)[0],
 						fibonacci(n - 1)[1] + fibonacci(n - 2)[1],
-						fibonacci(n - 1)[2] + fibonacci(n - 2)[2],
 				};
 				map.put(n, array);
 			}
@@ -30,8 +29,8 @@ public class Main {
 	}
 
 	public static void main(String[] args) throws Exception {
-		map.put(0, new int[] { 0, 1, 0 });
-		map.put(1, new int[] { 1, 0, 1 });
+		map.put(0, new int[] { 0, 1 });
+		map.put(1, new int[] { 1, 0 });
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -39,7 +38,7 @@ public class Main {
 		for (int i = 0; i < t; i++) {
 			st = new StringTokenizer(br.readLine());
 			int[] array = fibonacci(Integer.parseInt(st.nextToken()));
-			bw.write(array[1] + " " + array[2] + "\n");
+			bw.write(array[1] + " " + array[0] + "\n");
 		}
 		bw.flush();
 		br.close();
