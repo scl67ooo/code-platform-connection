@@ -21,8 +21,8 @@ public class Main {
 			st = new StringTokenizer(br.readLine());
 			String pwd = table.get(st.nextToken());
 			bw.write(pwd + "\n");
-			bw.flush();
 		}
+        bw.flush();
 		br.close();
 	}
 }
